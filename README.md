@@ -2,6 +2,8 @@
 
 Aplicação acadêmica para cadastro e acompanhamento de tarefas. O sistema implementa as operações **Create, Read, Update e Delete (CRUD)** e foi preparado para execução em uma máquina virtual por Docker Compose, com atualização automática usando um runner self-hosted do GitHub Actions.
 
+Repositório oficial: <https://github.com/Kenjihidehira/devops-atividade>
+
 ## Integrantes
 
 - Wesley Kenji Ito Hidehira - RA 250257

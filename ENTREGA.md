@@ -5,7 +5,7 @@
 - Trabalho: Trabalho 2 - Deploy automático em VM
 - Aluno 1: Wesley Kenji Ito Hidehira - RA 250257
 - Aluno 2: [PREENCHER NOME E RA]
-- URL do repositório: [PREENCHER APÓS PUBLICAR]
+- URL do repositório: <https://github.com/Kenjihidehira/devops-atividade>
 - URL da aplicação na rede do laboratório: `http://[IP_DA_VM]:3000`
 
 ## Antes de publicar
