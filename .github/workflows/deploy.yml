@@ -1,0 +1,48 @@
+name: Deploy automatico na VM
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-vm-producao
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, linux, x64]
+    timeout-minutes: 15
+
+    steps:
+      - name: Baixar repositorio
+        uses: actions/checkout@v4
+
+      - name: Verificar ambiente
+        run: |
+          node --version
+          docker --version
+          docker compose version
+
+      - name: Executar testes
+        run: npm test
+
+      - name: Atualizar aplicacao
+        run: docker compose up --build -d --remove-orphans
+
+      - name: Verificar deploy
+        run: |
+          for tentativa in {1..15}; do
+            if curl --fail --silent http://127.0.0.1:3000/api/health; then
+              echo "Aplicacao atualizada com sucesso"
+              exit 0
+            fi
+            echo "Aguardando aplicacao... tentativa ${tentativa}/15"
+            sleep 2
+          done
+          docker compose logs --tail=100
+          exit 1
+

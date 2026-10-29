@@ -1,0 +1,16 @@
+{
+  "name": "taskflow-crud",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CRUD academico com deploy automatico por GitHub Actions",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
+

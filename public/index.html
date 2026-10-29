@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TaskFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">PAINEL DE PRODUTIVIDADE</p>
+        <h1>TaskFlow</h1>
+        <p>Organize tarefas da equipe de forma simples.</p>
+      </div>
+      <div class="counter"><strong id="total">0</strong><span>tarefas</span></div>
+    </header>
+
+    <section class="panel">
+      <h2>Nova tarefa</h2>
+      <form id="task-form">
+        <input type="hidden" id="task-id">
+        <label>Título<input id="titulo" maxlength="120" required placeholder="Ex.: Revisar pipeline"></label>
+        <label>Responsável<input id="responsavel" maxlength="80" required placeholder="Nome do responsável"></label>
+        <label>Prioridade
+          <select id="prioridade">
+            <option value="baixa">Baixa</option>
+            <option value="media" selected>Média</option>
+            <option value="alta">Alta</option>
+          </select>
+        </label>
+        <div class="actions"><button type="submit" id="save">Adicionar tarefa</button><button type="button" class="secondary hidden" id="cancel">Cancelar</button></div>
+      </form>
+    </section>
+
+    <section class="list-section">
+      <div class="section-title"><h2>Tarefas</h2><span id="message" role="status"></span></div>
+      <div id="tasks" class="tasks"></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,19 @@
+services:
+  taskflow:
+    build: .
+    container_name: taskflow
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - taskflow-data:/app/data
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://127.0.0.1:3000/api/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+volumes:
+  taskflow-data:
+
