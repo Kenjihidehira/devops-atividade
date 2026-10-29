@@ -4,13 +4,11 @@
 
 - Trabalho: Trabalho 2 - Deploy automático em VM
 - Aluno 1: Wesley Kenji Ito Hidehira - RA 250257
-- Aluno 2: [PREENCHER NOME E RA]
 - URL do repositório: <https://github.com/Kenjihidehira/devops-atividade>
 - URL da aplicação na rede do laboratório: `http://[IP_DA_VM]:3000`
 
 ## Antes de publicar
 
-- [ ] Preencher o nome e o RA do segundo integrante no `README.md` e neste arquivo.
 - [ ] Criar um repositório vazio no GitHub.
 - [ ] Enviar todos os arquivos para a branch `main`.
 - [ ] Confirmar que o repositório permite execução de GitHub Actions.
@@ -55,4 +53,4 @@ Em 29/10/2026, o projeto foi validado localmente com:
 
 ## Envio ao líder de sala
 
-Enviar a URL completa do repositório e os dados dos dois integrantes. O líder deverá registrar o item como **Trabalho 2** na planilha da turma.
+Enviar a URL completa do repositório e os dados do aluno. O líder deverá registrar o item como **Trabalho 2** na planilha da turma.

@@ -7,7 +7,6 @@ Repositório oficial: <https://github.com/Kenjihidehira/devops-atividade>
 ## Integrantes
 
 - Wesley Kenji Ito Hidehira - RA 250257
-- [NOME DO SEGUNDO INTEGRANTE] - RA [PREENCHER]
 
 ## Tecnologias utilizadas
 
