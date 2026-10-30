@@ -23,12 +23,11 @@ jobs:
 
       - name: Verificar ambiente
         run: |
-          node --version
           docker --version
           docker compose version
 
       - name: Executar testes
-        run: npm test
+        run: docker run --rm -v "$PWD":/app -w /app node:22-alpine npm test
 
       - name: Atualizar aplicacao
         run: docker compose up --build -d --remove-orphans

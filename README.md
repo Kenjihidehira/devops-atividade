@@ -57,7 +57,7 @@ O runner self-hosted é um agente instalado na VM. Depois de registrado no repos
 O fluxo realiza quatro etapas:
 
 1. baixa a versão mais recente do repositório;
-2. executa os testes do CRUD;
+2. executa os testes do CRUD dentro de um contêiner `node:22-alpine` (a VM não precisa ter Node.js instalado);
 3. reconstrói e reinicia os contêineres com `docker compose up --build -d`;
 4. consulta `/api/health` e encerra com erro se a aplicação não responder corretamente.
 
